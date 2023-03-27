@@ -1,0 +1,33 @@
+#  nodemodules
+node_modules
+
+#  lockfiles
+package-lock.json
+yarn.lock
+
+#  dotenv
+.env
+
+# node js .gitignore
+
+#  Logs
+logs
+*.log
+npm-debug.log*
+log.txt
+
+
+
+#  Runtime data
+pids
+*.pid
+
+# pem files
+*.pem
+
+# build files
+build
+dist
+
+#  zip files
+*.zip

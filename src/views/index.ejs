@@ -1,0 +1,41 @@
+<div class="wrapper center">
+    <h1 class="font-xxxl"><span>💸</span></h1>
+    <h1 class="font-xxxl">Billify Project</h1>
+    <p class="font-md mt-lg">This is a simple application that allows you to manage your monthly expenses</p>
+
+    <div class="flex align-center justify-center mt-xxxl gap-xxl">
+        <a href="/new" class="py-sm px-xxxl rounded-sm bg-gradient-primary txt-white">add new</a>
+    </div>
+
+    <!-- display all bills in bills array that is passed to the page -->
+
+    <div class="mt-xxxl">
+        <h2 class="font-xl">Bills</h2>
+        <table class="mt-lg">
+            <thead>
+                <th class="font-md">ID</th>
+                <th class="font-md">Name</th>
+                <th class="font-md">Amount</th>
+                <th class="font-md">Frequency</th>
+                <th class="font-md">URL</th>
+                <th class="font-md">Due Date</th>
+                <th class="font-md">Auto Pay</th>
+            </thead>
+            <% for (let i = 0; i < bills.length; i++) { %>
+            <tr>
+                <td class="font-md">
+                    <a class="link underline" href="/bill/<%= bills[i].id %>"> <%= bills[i].id %> </a>
+                </td>
+                <td class="font-md"><%= bills[i].name %></td>
+                <td class="font-md"><%= bills[i].amount %></td>
+                <td class="font-md"><%= bills[i].frequency %></td>
+                <td class="font-md">
+                    <a class="link underline" href="<%= bills[i].url %>"> <%= bills[i].url %> </a>
+                </td>
+                <td class="font-md"><%= bills[i].dueDate %></td>
+                <td class="font-md"><%= bills[i].autopay %></td>
+            </tr>
+            <% } %>
+        </table>
+    </div>
+</div>
